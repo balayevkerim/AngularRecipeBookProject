@@ -1,0 +1,15 @@
+<a style="cursor: pointer;"
+class="list-group-item "
+[routerLink]="['/recipes',index]"  
+routerLinkActive='active'
+>
+  <div class="row">
+    <div class="col-md-4">
+      <p>{{recipe.name}}</p>
+    </div>
+    <div class="col-md-4">{{recipe.description}}</div>
+    <div class="col-md-4">
+      <img style="height: 50px;" src="{{recipe.imagePath}}" alt="{{recipe.name}}">
+    </div>
+  </div>
+</a>

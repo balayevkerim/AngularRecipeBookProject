@@ -1,0 +1,38 @@
+<form (ngSubmit) ="onSubmitForm(f)" #f ="ngForm">
+  <div class="row">
+    <div class="col-md-8 col-md">
+      <div class="form-group">
+        <label for="ingredient">Ingredient</label>
+        <input 
+        class="form-control"
+         id="ingredint"
+         type="text" 
+         name="ingredientName"
+         placeholder="Ingredient"
+        ngModel>
+    </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label for="amount">Amount</label>
+            <input 
+            name="amount"
+            class="form-control"
+             id="amount"
+             type="number" 
+             placeholder="Amount"
+            ngModel>
+        </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+
+        <button class="btn btn-primary" >{{editMode ? 'Update': 'Add'}}</button>
+        <button *ngIf="editMode" class="btn btn-danger" type="button" (click)="deleteIngredient(index)" >Delete</button>
+        <button class="btn btn-warning" type="button" (click)="reset()">Clear</button>
+        <hr>
+    </div>
+  </div>
+</form>
